@@ -7,4 +7,4 @@ app.get('/', (req, res) => {
     res.send("Hello, world!");
 })
 
-app.listen(PORT, `Server start by router ${PORT}`);
+app.listen(PORT, console.log(`Server start by router ${PORT}`));
