@@ -3,8 +3,20 @@ const app = express();
 
 const PORT = 3000;
 
-app.get('/', (req, res) => {
-    res.json({"res": "Hello, world!"});
+app.use(express.json())
+
+const UserControllers = require('./src/controllers/UserControllers');
+
+//////////////////////////
+//  User Routes         //
+//////////////////////////
+
+app.get('/user', async (req, res) => {
+
+    const DATA = await UserControllers.GetUser();
+
+    res.json(DATA);
+
 })
 
 app.listen(PORT, console.log(`Server start by router ${PORT}`));
