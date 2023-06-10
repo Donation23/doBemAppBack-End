@@ -12,11 +12,12 @@ const UserControllers = require('./src/controllers/UserControllers');
 //////////////////////////
 
 app.get('/user', async (req, res) => {
-
     const DATA = await UserControllers.GetUser();
-
     res.json(DATA);
-
 })
+
+app.post('/user', async (req, res) => {
+
+});
 
 app.listen(PORT, console.log(`Server start by router ${PORT}`));
