@@ -8,7 +8,7 @@ app.use(express.json())
 const UserControllers = require('./src/controllers/UserControllers');
 
 //////////////////////////
-//  User Routes         //
+//     User Routes      //
 //////////////////////////
 
 app.get('/user', async (req, res) => {
