@@ -1,10 +1,11 @@
 import { Pool } from 'pg';
+require('dotenv').config();
 
 const pool = new Pool({
-  user: 'default',
-  host: 'ep-wandering-sunset-318962-pooler.us-east-1.postgres.vercel-storage.com',
-  database: 'verceldb',
-  password: 'g7MAFozCHy1a',
+  user: process.env.User,
+  host: process.env.Host,
+  database: process.env.DataBase,
+  password: process.env.Password,
   port: 5432, // Porta padrão do PostgreSQL
   ssl: {
     rejectUnauthorized: false,

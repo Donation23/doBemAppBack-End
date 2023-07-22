@@ -10,6 +10,8 @@ export class App{
     this.router();
   }
 
+
+
   private middleware(){
     this.server.use(express.json());
   }
