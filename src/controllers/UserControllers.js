@@ -1,7 +1,7 @@
 
 const GetUser = async () => {
 
-    return {"res" : "Hello world"};
+    return {"res" : "Hello Matheus vazilao"};
 
 }
 
